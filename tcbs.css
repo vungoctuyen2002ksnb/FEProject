@@ -50,81 +50,6 @@ a:hover,a:active{
     -webkit-transition:all .4s ease;
     transition:all .4s ease
 }
-.detail-header-bottom{
-    z-index:2;
-    top:60px;
-    width:100%;
-    background:#fff;
-    border-bottom:#e5e5e5 1px solid
-}
-.detail-header-bottom .detail-header-bottom-row .detail-header-bottom-col{
-    border-right:#e5e5e5 1px solid;
-    padding:10px;
-    text-align:center
-}
-.detail-header-bottom .detail-header-bottom-row .detail-header-bottom-col{}.detail-header-bottom .detail-header-bottom-row .detail-header-bottom-col:last-child{
-    border-right:none
-}
-.detail-header-bottom .detail-header-bottom-row .detail-header-bottom-col .h-b-icon{
-    font-size:18px
-}
-.detail-header-bottom .detail-header-bottom-row .detail-header-bottom-col .h-b-text{
-    color:#243238;
-    font-size:18px;
-    font-weight:300;
-    padding:0 0 0 4px;
-    margin:0;
-    display:inline-block
-}
-.detail-header-bottom .detail-header-bottom-row .detail-header-bottom-col:nth-child(1):hover .h-b-text{
-    color:#3f5b24
-}
-.detail-header-bottom .detail-header-bottom-row .detail-header-bottom-col:nth-child(2):hover .h-b-text{
-    color:#191e23
-}
-.detail-header-bottom .detail-header-bottom-row .detail-header-bottom-col:nth-child(3):hover .h-b-text{
-    color:#8d4107
-}
-.detail-header-bottom .detail-header-bottom-row .detail-header-bottom-col:nth-child(4):hover .h-b-text
-{
-    color:#355a95
-}
-.detail-header-bottom .detail-header-bottom-row .detail-header-bottom-col:nth-child(5):hover .h-b-text{
-    color:#6a518b
-}
-.plate-detail-area{
-    padding:20px 0 0;
-    text-align:center
-}
-.plate-detail-area .plate-top{
-    width:153px
-}
-.plate-detail-area .car-logo-top{
-    width:92px;
-    float:right
-}
-.plate-detail-area .plate-main-title{
-    margin:0;
-    padding:8px 0;
-    color:#605e5e;
-    font-size:25px;
-    font-weight:400
-}
-.plate-detail-area .plate-main-title span{
-    color:#036dd4;
-    font-weight:700
-}
-.plate-detail-area .plate-sub-title{
-    margin:0;
-    padding:0;
-    color:#605e5e;font-size:19px;font-weight:400
-}
-.plate-detail-area .plate-sub-title i{
-    font-size:15px;
-    position:relative;
-    top:-2px;
-    margin-right:2px
-}
 .tab-nav-area{
     text-align:center;
     justify-content:center;
@@ -156,146 +81,11 @@ a:hover,a:active{
     margin:0 0 0 8px;
     padding:3px 6px
 }
-.leave-reply-title{
-    padding:0 0 6px;
-    color:#5f5f5f;
-    border-bottom:#5f5f5f 2px solid;
-    margin-bottom:20px;
-    font-weight:500;
-    font-size:22px;
-    text-align:left
-}
-.comment-section{
-    background-color:#fff;
-    border:#e5e5e5 1px solid;
-    margin-bottom:20px;
-    border-radius:3px
-}
-.comment-section .user-comment-area{
-    padding:20px
-}
-.comment-section .comment-username{
-    color:#036dd4;
-    margin:0;
-    padding:0;
-    text-align:left;
-    font-size:16px;
-    font-weight:500
-}
-.comment-section p.comment-date{
-    font-size:12px;
-    font-weight:300;
-    color:#5f5f5f;
-    margin:0
-}
-.comment-section p.comment-p{
-    font-size:1.05em;
-    font-weight:400;
-    color:#5f5f5f;
-    margin:0;
-    text-align:left;
-    margin:5px 0 0
-}
-.comment-new-reply .media .media-left{
-    flex:0 auto;
-    word-wrap:break-word;
-    margin-right:4px;
-    padding-right:10px
-}
-.comment-new-reply .media .media-body .e-form-group{
-    flex-flow:row wrap;
-    width:100%;
-    position:relative;
-    margin-bottom:8px;
-    display:flex
-}
-.comment-new-reply .media .media-body .e-form-group .e-form-input{
-    order:3;
-    flex:1 100%;
-    margin-bottom:5px
-}
-.comment-new-reply .media .media-body .e-form-group .e-form-input textarea{
-    font-weight:400;
-    outline:0;
-    line-height:1.25;
-    border-radius:4px;
-    color:gray;
-    background:#fff;
-    border:1px solid #bababa;
-    padding:5px 8px;
-    font-size:14px;
-    width:100%
-}
-.comment-new-reply .media .media-body .reply-btn{
-    box-sizing:border-box;
-    background-color:gray;
-    border:none;
-    border-radius:4px;
-    color:#fff;
-    cursor:pointer;
-    display:inline-block;
-    font-family:helvetica neue,Helvetica,Arial,sans-serif;
-    font-size:14px;
-    line-height:1.5;
-    margin:0;
-    padding:5px 20px;
-    text-align:center;
-    text-decoration:none;
-    position:relative;
-    float:right
-}
-.recent-license-plate-row{
-    padding-bottom:40px
-}
-.recent-license-plate-row .recent-license-plate-col{
-    padding:10px
-}
-.recent-license-plate-row .recent-license-plate-col .white-block{
-    background:#fff;
-    border:#e5e5e5 1px solid;
-    border-radius:3px;
-    padding:19px
-}
-.recent-license-plate-row .recent-license-plate-col .white-block .block-plate-number{
-    border-bottom:#ccc 4px solid;
-    padding:0 0 10px;
-    font-size:22px;font-weight:400;margin:0 0 13px
-}
-.recent-license-plate-row .recent-license-plate-col .white-block .block-plate-number i{
-    font-size:32px;
-    margin-right:8px
-}
-.recent-license-plate-row .recent-license-plate-col .white-block .block-report-details{
-    line-height:30px;
-    font-size:15px;
-    color:#505050;
-    margin:0;
-    padding:0;
-    font-weight:300
-}
-.recent-license-plate-row .recent-license-plate-col .white-block .block-report-btn{
-    line-height:35px;
-    padding:0;
-    margin:0;
-    text-align:center;
-    font-weight:900;
-    color:#fff;
-    width:100%;
-    text-transform:uppercase;
-    background:#ccc;
-    border-radius:3px;
-    font-size:15px;
-    margin-top:10px
-}
 @media screen and (max-width:992px){
     .tab-nav-area a{padding:0 15px;line-height:37px;font-size:1em}
 }
 @media screen and (max-width:768px){
-    .plate-detail-area 
-    .plate-top{display:inline-block}
-    .plate-detail-area 
     .car-logo-top{float:none;display:inline-block;margin-top:20px}
-    .plate-detail-area{padding:20px 0 50px}
     .detail-header-bottom 
     .detail-header-bottom-row 
     .detail-header-bottom-col{padding:4px 9px}
@@ -306,8 +96,6 @@ a:hover,a:active{
 }
 @media screen and (max-width:480px){
     .detail-header-bottom{top:0;position:relative;z-index:1}
-    .plate-detail-area{padding:0}
-    .plate-detail-area-2{padding:0}
     .tab-nav-area a{width:49%}
     .tab-nav-area a:last-child{width:100%}
 }
