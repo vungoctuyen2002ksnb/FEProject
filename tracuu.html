@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra Cứu Thông Tin Xe Ôtô</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script> -->
+    <link rel="stylesheet" href="/css/cdn.jsdelivr.net_npm_bootstrap@5.3.1_dist_css_bootstrap.min.css">
+    <script src="/js/cdn.jsdelivr.net_npm_bootstrap@5.3.1_dist_js_bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    #header{
+        background-color: rgb(139, 204, 206);
+        padding: 10px;
+    }
+    body{
+        background-color:rgb(193, 188, 180);
+    }
+    .divcrl img {
+        height: 350px;
+    }
+    ul{
+        font-size:x-large;
+    }
+    h3{
+        background-color: rgb(139, 204, 206);
+    }
+    h2{
+        border: 2px solid rgb(139, 204, 206);;
+        border-style: outset;
+        background-color: rgb(139, 204, 206);
+    }
+    #plateInfo, #motorcyclePlateInfo{
+        background-color: rgb(139, 204, 206);
+    }
+
+</style>
+<body>
+    <div id="header">
+        <h1 style="text-align: center; text-decoration: underline;">Quản lí biển số xe</i></h1>
+            <br>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs row" role="tablist">
+                <li class="nav-item col-6 col-md-3">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#home">Trang chủ</a>
+                </li>
+                <li class="nav-item col-6 col-md-3">
+                    <a class="nav-link" data-bs-toggle="tab" href="#oto"><i class="fa fa-car"></i>Biển số ô tô</a>
+                </li>
+                <li class="nav-item col-6 col-md-3">
+                    <a class="nav-link" data-bs-toggle="tab" href="#moto"><i class="fa-solid fa-motorcycle"></i>Biển số xe máy</a>
+                </li>
+                <li class="nav-item col-6 col-md-3">
+                    <a class="nav-link" data-bs-toggle="tab" href="#cm"><i class="fa-solid fa-comment"></i>Đóng góp ý kiến</a>
+                </li>
+            </ul>
+    </div>
+    <div class="container-fluid">
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div id="home" class="container tab-pane active"><br>
+                    <h2>HOME</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                </div>
+
+                <div id="oto" class="container tab-pane fade"><br>
+                    <h2>Quản lí biển số ô tô</h2>
+                    <!--///////////////////////////////////////////////////////-->
+                    <div class="container">
+                        <div class="content">
+                            <div class="row">
+                                <hr my-3>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-8">
+                                    <!--card1-->
+                                    <div class="card" style="margin-bottom: 1em;">
+                                        <div class="card-header"><i class="fa fa-car"></i> Tra cứu thông tin qua biển số  </div>
+                                        <div class="card-body">
+                                            <form>
+                                                <input type="text" id="searchBar" placeholder="Nhập biển số xe">
+                                                <button class="icon-button" id="searchButton" onclick="searchLicensePlate()">🔍 Tìm kiếm</button>
+                                                <button class="icon-button" id="addButton" onclick="addLicensePlate()">➕ Thêm mới</button>
+                                                <button class="icon-button" id="deleteButton" onclick="deleteLicensePlate()">❌ Xóa</button> 
+                                                <br>
+                                                <small class="form-text text-muted">Hiện tại trang web chỉ hỗ trợ theo biển số xe ôtô.</small>
+                                            </form>
+                                        </div>
+                                    </div>
+    
+                                    <!--card2-->
+                                    <h3>Kết quả tìm kiếm <i class="fa-solid fa-magnifying-glass"></i> : </h3>
+                                    <div id="plateInfo" class="card" style="width:100%"></div>
+                                    <!--card3-->
+                                    <div class="card" style="margin-bottom:1em">
+                                        <div class="card-header"><i class="fa-brands fa-facebook"></i> Comment</div>
+                                        <div class="card-body">
+                                            <div class="fb-comments" data-href="https://tracuubienso.com/" data-numposts="5"></div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                                <!--end col1 menu1-->
+    
+                                <div class="col-12 col-md-4">
+                                    <div class="card" style="margin-bottom: 2em;">
+                                        <div class="card-header"><i class="fa fa-info-circle"></i> Nguồn dữ liệu</div>
+                                        <div class="card-body">
+                                            Chúng tôi thu thập thông tin một cách khách quan, chính xác, từ những nguồn như
+                                            người dùng đóng góp, báo chí, diễn đàn, group facebook (otofun, ký sự đường phố,
+                                            HLX) hình ảnh, video đã được xác thực với mong muốn rằng người mua xe sẽ hiểu rõ
+                                            hơn về chiếc xe mình đang chuẩn bị mua.</br>
+                                            Trang web hoàn toàn miễn phí và hoạt động phi lợi nhuận.
+    
+                                        </div>
+                                    </div>
+                                   <!--end card1 col2-->
+                                    <div class="card" style="margin-bottom:1em">
+                                        <div class="card-header"><i class="fa fa-link" aria-hidden="true"></i> Liên kết
+                                        </div>
+                                        <div class="card-body p-2">
+                                            <table class="table-sm table-striped" width="100%" style="font-size: .9em;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a href="gui-thong-tin" target="_blank">Gửi thông tin xe</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="#" target="_blank">Tra cứu số VIN</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a rel="nofollow noopener" href="http://app.vr.org.vn/ptpublic/ThongTinPTPubLic.aspx" target="_blank">Tra Cứu Thông Tin Đăng Kiểm</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a rel="nofollow noopener" href="https://gplx.gov.vn/" target="_blank">Tra cứu GPLX (Bằng lái xe)</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a rel="nofollow noopener" href="https://m.me/tracuubienso" target="_blank">Tra cứu phạt nguội toàn quốc</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a rel="nofollow noopener" href="http://langmoi.vn/" target="_blank">Báo Làng Mới</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!--end card2 col2-->
+                                    <div class="toast show" style="width: 420px; height: 300px;">
+                                        <button type="button" class="btn-close" data-bs-dismiss="toast" title="Đóng quảng cáo"></button>
+                                        <div class="toast-body">
+                                            <video width="100%" height="100%" controls autoplay muted>
+                                                <source src="/video/vdqc.mp4" type="video/mp4">
+                                                <source src="movie.ogg" type="video/ogg">
+                                            </video>
+                                        </div>
+                                        <div class="toast-footer">
+                                            <a rel="noopener" href="https://vinfastauto.com/vn_vi" target="_blank">Vinfast auto</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/////////////////////////////////////////////////////////////-->
+                </div>
+
+                <div id="moto" class="container tab-pane fade"><br>
+                    <h2>Quản lí biển số xe máy</h2>
+                    <div class="container">
+                        <div class="content">
+                            <div class="row">
+                                <hr my-3>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-8">
+                                    <!--card1-->
+                                    <div class="card" style="margin-bottom: 1em;">
+                                        <div class="card-header"><i class="fa-solid fa-motorcycle"></i> Tra cứu thông tin qua biển số </div>
+                                        <div class="card-body">
+                                            <form>
+                                                <input type="text" id="searchBarMotorcycle" placeholder="Nhập biển số xe">
+                                                <button class="icon-button" id="searchButtonMotorcycle" onclick="searchMotorcycleLicensePlate()">🔍 Tìm kiếm</button>
+                                                <button class="icon-button" id="addButtonMotorcycle" onclick="addMotorcycleLicensePlate()">➕ Thêm mới</button>
+                                                <button class="icon-button" id="deleteButtonMotorcycle" onclick="deleteMotorcycleLicensePlate()">❌ Xóa</button> 
+                                                <br>
+                                                <small class="form-text text-muted">Hiện tại trang web chỉ hỗ trợ theo biển số xe máy.</small>
+                                            </form>
+                                        </div>
+                                    </div>
+    
+                                    <!--card2-->
+                                    <h3>Kết quả tìm kiếm <i class="fa-solid fa-magnifying-glass"></i> : </h3>
+                                    <div id="motorcyclePlateInfo" class="card" style="width:100%"></div>
+                                    <!--card3-->
+                                    <div class="card" style="margin-bottom:1em">
+                                        <div class="card-header"><i class="fa-brands fa-facebook"></i> Comment</div>
+                                        <div class="card-body">
+                                            <div class="fb-comments" data-href="https://tracuubienso.com/"
+                                                data-numposts="5"></div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                                <!--end col1 menu1-->
+    
+                                <div class="col-12 col-md-4">
+                                    <div class="card" style="margin-bottom: 2em;">
+                                        <div class="card-header"><i class="fa fa-info-circle"></i> Nguồn dữ liệu</div>
+                                        <div class="card-body">
+                                            Chúng tôi thu thập thông tin một cách khách quan, chính xác, từ những nguồn như
+                                            người dùng đóng góp, báo chí, diễn đàn, group facebook (otofun, ký sự đường phố,
+                                            HLX) hình ảnh, video đã được xác thực với mong muốn rằng người mua xe sẽ hiểu rõ
+                                            hơn về chiếc xe mình đang chuẩn bị mua.</br>
+                                            Trang web hoàn toàn miễn phí và hoạt động phi lợi nhuận.
+    
+                                        </div>
+                                    </div>
+                                   <!--end card1 col2-->
+                                    <div class="card" style="margin-bottom:1em">
+                                        <div class="card-header"><i class="fa fa-link" aria-hidden="true"></i> Liên kết
+                                        </div>
+                                        <div class="card-body p-2">
+                                            <table class="table-sm table-striped" width="100%" style="font-size: .9em;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a href="gui-thong-tin" target="_blank">Gửi thông tin xe</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="#" target="_blank">Tra cứu số VIN</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a rel="nofollow noopener" href="http://app.vr.org.vn/ptpublic/ThongTinPTPubLic.aspx" target="_blank">Tra Cứu Thông Tin Đăng Kiểm</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a rel="nofollow noopener" href="https://gplx.gov.vn/" target="_blank">Tra cứu GPLX (Bằng lái xe)</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a rel="nofollow noopener" href="https://m.me/tracuubienso" target="_blank">Tra cứu phạt nguội toàn quốc</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a rel="nofollow noopener" href="http://langmoi.vn/" target="_blank">Báo Làng Mới</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!--end card2 col2-->
+                                    <div class="toast show" style="width: 420px; height: 300px;">
+                                        <button type="button" class="btn-close" data-bs-dismiss="toast" title="Đóng quảng cáo"></button>
+                                        <div class="toast-body">
+                                            <video width="100%" height="100%" controls autoplay muted>
+                                                <source src="/video/qchonda.mp4" type="video/mp4">
+                                                <source src="movie.ogg" type="video/ogg">
+                                            </video>
+                                        </div>
+                                        <div class="toast-footer">
+                                            <a rel="noopener" href="https://www.honda.com.vn/xe-may/san-pham" target="_blank">Honda motor</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="cm" class="container tab-pane fade"><br>
+                    <div class="container mt-3">
+                        <h2>Hân hạnh phục vụ</h2>
+                        <p style="text-decoration: underline;">Nếu có bất kì ý kiến gì xin vui lòng soạn vào ô dưới đây để gửi tới chúng tôi :</p>
+                        <!-- <form action="/action_page.php"> -->
+                        <form>
+                            <div class="mb-3 mt-3">
+                                <label for="comment">Nội dung:</label>
+                                <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary"
+                                onclick="alert('Ý kiến của bạn đã được gửi đi nhé !')">Gửi</button>
+                        </form>
+                    </div>
+
+                    <div id="luot" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Indicators/dots -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#luot" data-bs-slide-to="0" class="active" title="Slide 1"></button>
+                            <button type="button" data-bs-target="#luot" data-bs-slide-to="1" title="Slide 2"></button>
+                            <button type="button" data-bs-target="#luot" data-bs-slide-to="2" title="Slide 3"></button>
+                            <button type="button" data-bs-target="#luot" data-bs-slide-to="3" title="Slide 4"></button>
+                            <button type="button" data-bs-target="#luot" data-bs-slide-to="4" title="Slide 5"></button>
+                        </div>
+
+                        <!-- The slideshow/carousel -->
+                        <div class="carousel-inner mt-3 divcrl">
+                            <div class="carousel-item active" data-bs-interval="1500">
+                                <img src="/img/gt1.jpg" alt="UTC" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="1500">
+                                <img src="/img/gt2.jpg" alt="UTC" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="1500">
+                                <img src="/img/gt3.jpg" alt="UTC" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="1500">
+                                <img src="/img/gt4.png" alt="UTC" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="1500">
+                                <img src="/img/gt5.jpg" alt="UTC" class="d-block w-100">
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls/icons -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#luot" data-bs-slide="prev" title="Slide trước">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#luot" data-bs-slide="next" title="Slide tiếp theo">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+
+                    <nav class="container-fluid p-5">
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <ul style="list-style: none;">
+                                    <li><a href="https://www.facebook.com/dhgtvtcaugiay">fanpage</a></li>
+                                    <li class="text-danger">HotLine : <i class="fa-solid fa-phone">0123456789</i></li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-lg-6 text-success">
+                                <strong>Tham gia giao thông 1 cách an toàn nhé <i
+                                        class="fa-solid fa-heart"></i></strong>
+                                <img style="height: 100px; width: 100px;" src="/img/gt7.gif" alt="hi">
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+    </div>
+    <script src="/timkiem.js"></script>
+    <!--comment fb-->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0&appId=YOUR_APP_ID&autoLogAppEvents=1"
+        nonce="YOUR_NONCE">
+    </script>
+</body>
+
+</html>
